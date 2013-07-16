@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   // response.send('Hello World - Bharath');
-  fs.readFileSync('index.html');
+  fs.readFileSync('~/bitstarter/index.html');
 });
 
 var port = process.env.PORT || 5000;
