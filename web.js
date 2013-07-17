@@ -8,7 +8,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   // response.send(fs.readFileSync(FILE_DEFAULT));
-  response.send(buf.toString(fs.readFileSync(FILE_DEFAULT)));
+  response.send(buf.toBlob(fs.readFileSync(FILE_DEFAULT)));
 });
 
 var port = process.env.PORT || 5000;
