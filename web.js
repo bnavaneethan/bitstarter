@@ -7,7 +7,7 @@ var json = JSON.stringify(buf);
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  buf.toString(fs.readFileSync(FILE_DEFAULT));
+  fs.readFileSync(FILE_DEFAULT);
 });
 
 var port = process.env.PORT || 5000;
